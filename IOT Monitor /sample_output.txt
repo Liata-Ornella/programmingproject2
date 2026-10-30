@@ -1,0 +1,199 @@
+Dynamic IoT Event Monitoring and Callback Engine
+Operating ranges: temperature 0-40 C, pressure 90-110 kPa, battery 3.30-4.20 V.
+Simulation ranges: temperature -5 to 50 C, pressure 80 to 130 kPa, battery 3.0 to 4.5 V.
+
+===== DYNAMIC IoT EVENT MONITOR =====
+1. Register a device
+2. Display all devices
+3. Remove a device by ID
+4. Generate and process readings
+5. Display detected alerts
+6. Monitoring summary
+7. Exit
+Choose an option: 
+--- Register a device ---
+Enter device ID: Device name: Type: 1. Temperature  2. Pressure  3. Battery
+Choose type: Device Kigali Temp Sensor (ID 101) registered.
+
+===== DYNAMIC IoT EVENT MONITOR =====
+1. Register a device
+2. Display all devices
+3. Remove a device by ID
+4. Generate and process readings
+5. Display detected alerts
+6. Monitoring summary
+7. Exit
+Choose an option: 
+--- Register a device ---
+Enter device ID: Device name: Type: 1. Temperature  2. Pressure  3. Battery
+Choose type: Device Huye Pressure (ID 202) registered.
+
+===== DYNAMIC IoT EVENT MONITOR =====
+1. Register a device
+2. Display all devices
+3. Remove a device by ID
+4. Generate and process readings
+5. Display detected alerts
+6. Monitoring summary
+7. Exit
+Choose an option: 
+--- Register a device ---
+Enter device ID: Device name: Type: 1. Temperature  2. Pressure  3. Battery
+Choose type: Device Bus Battery Monitor (ID 303) registered.
+
+===== DYNAMIC IoT EVENT MONITOR =====
+1. Register a device
+2. Display all devices
+3. Remove a device by ID
+4. Generate and process readings
+5. Display detected alerts
+6. Monitoring summary
+7. Exit
+Choose an option: 
+--- Registered devices (3) ---
+ID: 101 | Name: Kigali Temp Sensor | Type: Temperature | Reading:   0.00 C | Status: NORMAL
+ID: 202 | Name: Huye Pressure      | Type: Pressure    | Reading:      0 kPa | Status: NORMAL
+ID: 303 | Name: Bus Battery Monitor | Type: Battery     | Reading:   0.00 V | Status: NORMAL
+
+===== DYNAMIC IoT EVENT MONITOR =====
+1. Register a device
+2. Display all devices
+3. Remove a device by ID
+4. Generate and process readings
+5. Display detected alerts
+6. Monitoring summary
+7. Exit
+Choose an option: Enter the ID of the device to remove: Removing Huye Pressure (ID 202).
+Device removed successfully.
+
+===== DYNAMIC IoT EVENT MONITOR =====
+1. Register a device
+2. Display all devices
+3. Remove a device by ID
+4. Generate and process readings
+5. Display detected alerts
+6. Monitoring summary
+7. Exit
+Choose an option: 
+--- Register a device ---
+Enter device ID: Device name: Type: 1. Temperature  2. Pressure  3. Battery
+Choose type: Device Musanze Pressure (ID 404) registered.
+
+===== DYNAMIC IoT EVENT MONITOR =====
+1. Register a device
+2. Display all devices
+3. Remove a device by ID
+4. Generate and process readings
+5. Display detected alerts
+6. Monitoring summary
+7. Exit
+Choose an option: How many readings should be generated (minimum 10): 
+--- Simulated readings ---
+
+Reading 1:
+  Device ID: 101 | Name: Kigali Temp Sensor | Type: Temperature | Value: -3.16 C
+  [temperature_monitor] ALERT: -3.16 C is outside 0.00 to 40.00 C.
+  [sensor_drift_detector] First reading saved; no previous value to compare.
+
+Reading 2:
+  Device ID: 303 | Name: Bus Battery Monitor | Type: Battery | Value: 3.49 V
+  [battery_monitor] Normal: voltage is within 3.30 to 4.20 V.
+  [sensor_drift_detector] First reading saved; no previous value to compare.
+
+Reading 3:
+  Device ID: 404 | Name: Musanze Pressure | Type: Pressure | Value: 103 kPa
+  [pressure_monitor] Normal: pressure is within 90 to 110 kPa.
+  [sensor_drift_detector] First reading saved; no previous value to compare.
+
+Reading 4:
+  Device ID: 101 | Name: Kigali Temp Sensor | Type: Temperature | Value: 18.24 C
+  [temperature_monitor] Normal: temperature is within 0.00 to 40.00 C.
+  [sensor_drift_detector] DRIFT WARNING: change 21.40 exceeds 8.00.
+
+Reading 5:
+  Device ID: 303 | Name: Bus Battery Monitor | Type: Battery | Value: 3.31 V
+  [battery_monitor] Normal: voltage is within 3.30 to 4.20 V.
+  [sensor_drift_detector] Stable change: 0.19 (limit 0.35).
+
+Reading 6:
+  Device ID: 404 | Name: Musanze Pressure | Type: Pressure | Value: 99 kPa
+  [pressure_monitor] Normal: pressure is within 90 to 110 kPa.
+  [sensor_drift_detector] Stable change: 4.00 (limit 15.00).
+
+Reading 7:
+  Device ID: 101 | Name: Kigali Temp Sensor | Type: Temperature | Value: 30.01 C
+  [temperature_monitor] Normal: temperature is within 0.00 to 40.00 C.
+  [sensor_drift_detector] DRIFT WARNING: change 11.77 exceeds 8.00.
+
+Reading 8:
+  Device ID: 303 | Name: Bus Battery Monitor | Type: Battery | Value: 4.30 V
+  [battery_monitor] ALERT: 4.30 V is outside 3.30 to 4.20 V.
+  [sensor_drift_detector] DRIFT WARNING: change 0.99 exceeds 0.35.
+
+Reading 9:
+  Device ID: 404 | Name: Musanze Pressure | Type: Pressure | Value: 94 kPa
+  [pressure_monitor] Normal: pressure is within 90 to 110 kPa.
+  [sensor_drift_detector] Stable change: 5.00 (limit 15.00).
+
+Reading 10:
+  Device ID: 101 | Name: Kigali Temp Sensor | Type: Temperature | Value: -3.63 C
+  [temperature_monitor] ALERT: -3.63 C is outside 0.00 to 40.00 C.
+  [sensor_drift_detector] DRIFT WARNING: change 33.64 exceeds 8.00.
+
+Reading 11:
+  Device ID: 303 | Name: Bus Battery Monitor | Type: Battery | Value: 3.55 V
+  [battery_monitor] Normal: voltage is within 3.30 to 4.20 V.
+  [sensor_drift_detector] DRIFT WARNING: change 0.75 exceeds 0.35.
+
+Reading 12:
+  Device ID: 404 | Name: Musanze Pressure | Type: Pressure | Value: 127 kPa
+  [pressure_monitor] ALERT: 127 kPa is outside 90 to 110 kPa.
+  [sensor_drift_detector] DRIFT WARNING: change 33.00 exceeds 15.00.
+
+Finished processing 12 readings.
+
+===== DYNAMIC IoT EVENT MONITOR =====
+1. Register a device
+2. Display all devices
+3. Remove a device by ID
+4. Generate and process readings
+5. Display detected alerts
+6. Monitoring summary
+7. Exit
+Choose an option: 
+--- Devices currently in alert status ---
+ID: 101 | Name: Kigali Temp Sensor | Type: Temperature | Reading:  -3.63 C | Status: ALERT
+  Expected range: 0 to 40 C | Callback: temperature_monitor
+ID: 404 | Name: Musanze Pressure   | Type: Pressure    | Reading:    127 kPa | Status: ALERT
+  Expected range: 90 to 110 kPa | Callback: pressure_monitor
+
+===== DYNAMIC IoT EVENT MONITOR =====
+1. Register a device
+2. Display all devices
+3. Remove a device by ID
+4. Generate and process readings
+5. Display detected alerts
+6. Monitoring summary
+7. Exit
+Choose an option: 
+========== MONITORING SUMMARY ==========
+Registered devices:       3
+Readings processed:       12
+Normal readings:          8
+Abnormal readings:        4
+Temperature alerts:       2
+Pressure alerts:          1
+Battery alerts:           1
+Custom sensor drift warnings: 6
+========================================
+
+===== DYNAMIC IoT EVENT MONITOR =====
+1. Register a device
+2. Display all devices
+3. Remove a device by ID
+4. Generate and process readings
+5. Display detected alerts
+6. Monitoring summary
+7. Exit
+Choose an option: Closing monitor...
+Dynamic memory released. Goodbye.

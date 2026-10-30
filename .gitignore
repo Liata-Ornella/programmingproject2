@@ -1,0 +1,6 @@
+.DS_Store
+*.o
+academic_performance_project/academic
+academic_performance_project/academic_risk_engine
+IOT Monitor/iot_monitor
+Text_Mining_Analyzer/text_analyzer

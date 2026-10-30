@@ -1,0 +1,84 @@
+PROJECT 1 — SAMPLE OUTPUT
+=========================
+
+The following is an illustrative run using the initial dataset.
+At startup, the program asks the user to enter their own university ID.
+
+Student ID: YOUR_STUDENT_ID
+Project: Dynamic Academic Performance and Risk Analysis Engine
+Custom Analysis: Academic Risk Index
+
+========== MAIN MENU ==========
+1. Add a new student
+2. Display all students
+3. Sort students
+4. Calculate average grade
+5. Find top-performing student
+6. Search for a student
+7. Remove a student
+8. Run custom academic analysis
+9. Generate summary report
+10. Exit
+
+Example: selecting option 2 displays the 10 initial student records.
+
+ID       NAME                    COURSE              GRADE
+---------------------------------------------------------------
+1001     Alice Johnson           Mathematics         85.00
+1002     Brian Smith             Programming         48.00
+1003     Clara Williams          Mathematics         92.00
+1004     David Brown             Programming         65.00
+1005     Esther Davis            Database             37.00
+1006     Felix Martin             Database             76.00
+1007     Grace Wilson             Mathematics         88.00
+1008     Henry Thomas             Programming         55.00
+1009     Irene Moore              Database             95.00
+1010     James Taylor             Mathematics         29.00
+
+Example: selecting option 4:
+
+Class average: 67.00
+
+Example: selecting option 5:
+
+--- TOP-PERFORMING STUDENT ---
+ID       NAME                    COURSE              GRADE
+1009     Irene Moore              Database             95.00
+
+Example: selecting option 9:
+
+======= ACADEMIC SUMMARY REPORT =======
+Total student records: 10
+Average grade: 67.00
+Highest grade: 95.00
+Lowest grade: 29.00
+Students who passed: 7
+Students below pass mark: 3
+High-risk students: 3
+Pass threshold: 50.00
+Pass rate: 70.00%
+
+Example: registration:
+
+Enter student ID: 1011
+Enter full name: Maria Clark
+Enter course: Programming
+Enter grade (0-100): 81
+Student added successfully.
+
+Example: duplicate ID:
+
+Enter student ID: 1001
+Error: this student ID already exists.
+
+Example: removal:
+
+Enter student ID to remove: 1011
+Removing student: Maria Clark
+Student removed successfully.
+
+Example: exit:
+
+Exiting Academic Performance Engine...
+All allocated memory released.
+Program terminated successfully.
